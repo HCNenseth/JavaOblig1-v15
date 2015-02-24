@@ -4,8 +4,6 @@ package javaoblig1.v15;
  *
  * @author Hans Christian
  */
-//Bok.java
-//På toppen av klassehierarkiet for boktyper.
 public abstract class Bok {
 
     private String forfatter, tittel;
@@ -32,6 +30,7 @@ public abstract class Bok {
         return tittel;
     }
 
+    @Override
     public String toString() {
         String s = forfatter + "; ";
         s += tittel + "; ";
@@ -52,6 +51,7 @@ class Skolebok extends Bok {
         skolefag = fag;
     }
 
+    @Override
     public String toString() {
         String s = super.toString();
         s += "; trinn: " + klassetrinn;
@@ -69,6 +69,7 @@ class Fagbok extends Bok {
         fagområde = omr;
     }
 
+    @Override
     public String toString() {
         String s = super.toString();
         s += "; " + fagområde;
@@ -87,6 +88,7 @@ abstract class Roman extends Bok {
         sjanger = s;
     }
 
+    @Override
     public String toString() {
         String s = super.toString();
         s += ". Sjanger: " + sjanger;
@@ -103,6 +105,7 @@ class NorskRoman extends Roman {
         målform = m;
     }
 
+    @Override
     public String toString() {
         String s = super.toString();
         s += ". " + målform;
@@ -119,6 +122,7 @@ class UtenlandskRoman extends Roman {
         språk = sp;
     }
 
+    @Override
     public String toString() {
         String s = super.toString();
         s += ". " + språk;

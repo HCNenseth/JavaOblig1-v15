@@ -5,7 +5,6 @@ package javaoblig1.v15;
  * @author Hans Christian
  */
 import java.awt.event.*;
-import javax.swing.*;
 
 public class Bokprogram {
 
@@ -13,10 +12,12 @@ public class Bokprogram {
         Bokarkiv vindu = new Bokarkiv();
         vindu.addWindowListener(
                 new WindowAdapter() {
-                    public void windowClosing(WindowEvent e) {
 
+                    @Override
+                    public void windowClosing(WindowEvent e) {
                         System.exit(0);
                     }
+
                 });
     }
 

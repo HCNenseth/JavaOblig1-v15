@@ -193,6 +193,7 @@ public class Bokarkiv extends JFrame {
 
     private class Knappelytter implements ActionListener {
 
+        @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == regFagbok) {
                 nyFagbok();
