@@ -1,9 +1,7 @@
 package javaoblig1.v15;
 
-/**
- *
- * @author Hans Christian
- */
+import java.io.*;
+
 public abstract class Bok {
 
     private String forfatter, tittel;
@@ -29,6 +27,14 @@ public abstract class Bok {
     public String getTittel() {
         return tittel;
     }
+    
+//  < Leser  verdier fra fil og lagrer dem i de tilhørende datafeltene. >
+    public boolean lesObjektFraFil(DataInputStream input) {
+          }
+    
+//  < Skriver  datafeltenes verdier til fil. >
+    public void skrivObjektTilFil(DataOutputStream output) {
+          }
 
     @Override
     public String toString() {

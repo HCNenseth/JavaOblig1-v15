@@ -1,9 +1,5 @@
 package javaoblig1.v15;
 
-/**
- *
- * @author Hans Christian
- */
 import java.awt.event.*;
 
 public class Bokprogram {
@@ -17,8 +13,6 @@ public class Bokprogram {
                     public void windowClosing(WindowEvent e) {
                         System.exit(0);
                     }
-
                 });
     }
-
 }
