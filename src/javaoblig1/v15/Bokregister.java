@@ -1,9 +1,5 @@
 package javaoblig1.v15;
 
-/**
- *
- * @author Hans Christian
- */
 import javax.swing.JTextArea;
 
 public class Bokregister {
