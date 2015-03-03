@@ -27,14 +27,20 @@ public abstract class Bok {
     public String getTittel() {
         return tittel;
     }
-    
+
 //  < Leser  verdier fra fil og lagrer dem i de tilhørende datafeltene. >
     public boolean lesObjektFraFil(DataInputStream input) {
-          }
-    
+
+        return true;
+    }
+
 //  < Skriver  datafeltenes verdier til fil. >
-    public void skrivObjektTilFil(DataOutputStream output) {
-          }
+    public void skrivObjektTilFil(DataOutputStream output) throws IOException {
+        output.writeUTF(forfatter);
+        output.writeUTF(tittel);
+        output.writeInt(sideantall);
+        output.writeDouble(pris);
+    }
 
     @Override
     public String toString() {

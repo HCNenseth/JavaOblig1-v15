@@ -1,5 +1,6 @@
 package javaoblig1.v15;
 
+import java.io.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -70,8 +71,26 @@ public class Bokarkiv extends JFrame {
         regNRoman.addActionListener(lytter);
         regURoman.addActionListener(lytter);
         visReg.addActionListener(lytter);
+      //  lesinn();
+
         setSize(550, 500);
         setVisible(true);
+    }
+
+    private void visFeilmelding(String melding) {
+        JOptionPane.showMessageDialog(this, melding,
+                "Problem", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public void skrivTilFil() {
+        try (ObjectOutputStream utfil = new ObjectOutputStream(
+                new FileOutputStream("src/liste.data"))) {
+            utfil.writeObject(Bok);
+        } catch (NotSerializableException nse) {
+            visFeilmelding("Objektet er ikke serialisert!");
+        } catch (IOException ioe) {
+            visFeilmelding("Problem med utskrift til fil.");
+        }
     }
 
     public void nyFagbok() {

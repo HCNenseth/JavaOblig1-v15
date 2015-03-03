@@ -11,6 +11,7 @@ public class Bokprogram {
 
                     @Override
                     public void windowClosing(WindowEvent e) {
+                        vindu.skrivTilFil();
                         System.exit(0);
                     }
                 });
